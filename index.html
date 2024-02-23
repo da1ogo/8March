@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<title>8 МАРТА</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+			background-color: pink;
+		}
+        
+		h1 {
+            color: #ff0080;
+        }
+
+		#button {
+		background-color: #ff0080; /* Цвет кнопки */
+		color: pink; /* Цвет текста в кнопке */
+		font-size: 24px; /* Размер текста в кнопке */
+		padding: 10px 20px; /* Внутренние отступы кнопки */
+		border: none; /* Убираем границу кнопки */
+		border-radius: 5px; /* Закругляем углы кнопки */
+		font-weight: bold;
+	}
+	
+		#1 {
+			width: 10px;
+			height: 10px;
+			position: absolute;
+			top: 20px; /* Измените значение, чтобы перемещать вверх-вниз */
+			left: 20px; /* Измените значение, чтобы перемещать влево-вправо */
+		}
+    </style>
+</head>
+<body>
+    <h1>НАСТЯ! С 8 МАРТА!</h1>
+	<audio autoplay>
+  <source src="song.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+		<div class='photo'>
+			<div class='photo-item'>
+			<img src="1.png" width="200" height="150" alt="" id='1'>
+			</div>
+		</div>
+	<button id="button" onclick="changeText()">НАЧАТЬ</button>
+    <div id="message"></div>
+	<script>
+        let clickCount = 0;
+        function changeText() {
+            clickCount++;
+            if (clickCount === 1) {
+                document.getElementById("button").innerHTML = "ПРОСТО ЖМИ НА ЭТУ КНОПКУ";
+				document.querySelector("audio").src = "song.mp3";
+                document.querySelector("audio").play();
+			} else if (clickCount === 2) {
+                document.getElementById("button").innerHTML = "ДАЛЬШЕ";
+				document.getElementById("message").innerHTML = "<br>НАСТЯ, ЭТО НЕБОЛЬШОЕ ПОЗДРАВЛЕНИЕ С 8 МАРТА ДЛЯ ТЕБЯ";
+			} else if (clickCount === 3) {
+                document.getElementById("button").innerHTML = "ДАЛЬШЕ";
+				document.getElementById("message").innerHTML = "<br>Я ХОЧУ ПРОСТО, ЧТОБ ТЫ КАЙФАНУЛА СО СВОЕЙ ЛЮБИМОЙ ПЕСНИ, КОГДА НАСЛУШАЕШЬСЯ НАЖИМАЙ НА КНОПКУ";
+			} else if (clickCount === 4) {
+				document.getElementById("message").innerHTML = "<br>НАСТЯ, Я ТАК РАД, ЧТО ТЫ НАПИСАЛА МНЕ ВЕЧЕРОМ В ВОСКРЕСЕНЬЕ";
+				document.querySelector("audio").pause();
+                document.querySelector("audio").src = "love.mp3";
+                document.querySelector("audio").play()
+               
+            } else if (clickCount === 5) {
+                document.getElementById("message").innerHTML = "<br>И ПОПРОСИЛА ЗАПОМНИТЬ ЕБУЧИЕ ОТВЕТЫ НА ЕБУЧИЙ ВТОРОЙ ВАРИАНТ НА ЕБУЧЕЙ КОНТРОЛЬНОЙ ПО АЛГЕБРЕ";
+                document.getElementById("button").style.display = "ДАЛЬШЕ";
+         }else if (clickCount === 6)  {
+                document.getElementById("message").innerHTML = "<br>Я ТАК РАД, ЧТО У НАС НЕТ ХУЕВЫХ СИТУАЦИЙ";
+                document.getElementById("button").style.display = "ДАЛЬШЕ";
+            }else if (clickCount === 7)  {
+                document.getElementById("message").innerHTML = "<br>НЕТ НИКАКИХ НЕДОПОНИМАНИЙ";
+                document.getElementById("button").style.display = "ДАЛЬШЕ";
+            }else if (clickCount === 8)  {
+                document.getElementById("message").innerHTML = "<br>Я РАД, ЧТО У НАС С ТОБОЙ - ВСЕ ПРОСТО АХУЕННО";
+                document.getElementById("button").style.display = "ДАЛЬШЕ";
+            }else if (clickCount === 9)  {
+                document.getElementById("message").innerHTML = "<br>РАД, ЧТО ТЫ СМОТРИШЬ НА МЕНЯ СВОИМИ ПРЕКРАСНЫМИ";
+                document.getElementById("button").style.display = "ДАЛЬШЕ";
+            }else if (clickCount === 10)  {
+                document.getElementById("message").innerHTML = "<br>И МНОГООБЕЩАЮЩИМИ ГЛАЗАМИ";
+                document.getElementById("button").style.display = "ДАЛЬШЕ";
+            }else if (clickCount === 11)  {
+                document.getElementById("message").innerHTML = "<br>ОСТАВАЙСЯ ТАКОЙ ЖЕ ПРЕКРАСНОЙ";
+                document.getElementById("button").style.display = "ДАЛЬШЕ";
+            }else if (clickCount === 12)  {
+                document.getElementById("message").innerHTML = "<br>АПНИ 50ТЫЩ КУБКОВ В БРАВЛСТАРСЕ";
+                document.getElementById("button").style.display = "ДАЛЬШЕ";
+			}else if (clickCount === 13)  {
+                document.getElementById("message").innerHTML = "<br>ПОЧАЩЕ УЛЫБАЙСЯ";
+                document.getElementById("button").style.display = "ДАЛЬШЕ";
+			}else if (clickCount === 14)  {
+                document.getElementById("message").innerHTML = "<br>И ОТБРАСЫВАЙ НЕГАТИВНЫЕ МЫСЛИ В СТОРОНУ";
+                document.getElementById("button").style.display = "ДАЛЬШЕ";
+			}else if (clickCount === 15)  {
+                document.getElementById("message").innerHTML = "<br>НЕ ПЕРЕЖИВАЙ НА СЧЕТ ЭКЗАМЕНОВ";
+                document.getElementById("button").style.display = "ДАЛЬШЕ";
+			}else if (clickCount === 16)  {
+                document.getElementById("message").innerHTML = "<br>МЫ ВСЕ СДАДИМ КАК НЕХУЙ ДЕЛАТЬ";
+                document.getElementById("button").style.display = "ДАЛЬШЕ";
+			}else if (clickCount === 17)  {
+                document.getElementById("message").innerHTML = "<br>ЕЩЕ РАЗ С 8 МАРТА<3 <br> К СОЖАЛЕНИЮ ЭТО КОНЕЦ.. <br> НО МОЖЕШЬ ПОСЛУШАТЬ АХУЕННУЮ ПЕСНЮ";
+                document.getElementById("button").style.display = "ДАЛЬШЕ";
+            }
+		}
+			document.getElementById("message").style.fontSize = "30px"; // Изменить размер шрифта на 20 пикселей
+			document.getElementById("message").style.textAlign = "center"; // Выравнивание текста по центру
+			document.getElementById("message").style.fontFamily = "'Roboto', sans-serif;"; // Задать шрифт тексту
+			document.getElementById("message").style.fontWeight = 'bold';
+			document.getElementById("message").style.color = "#ff0080";
+		</script>
+		<script>
+  var audio = document.getElementById("myAudio");
+  audio.play();
+	</script>
+</body>
+</html>
